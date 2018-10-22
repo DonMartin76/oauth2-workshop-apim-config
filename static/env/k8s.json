@@ -21,10 +21,10 @@
     "value": "http://${HELM_NAME}-mailer.${K8S_NAMESPACE}.svc.cluster.local:3003"
   },
   "PORTAL_NETWORK_APIHOST": {
-    "value": "api.ws.donmartin76.com"
+    "value": "api.ow.donmartin76.com"
   },
   "PORTAL_NETWORK_PORTALHOST": {
-    "value": "portal.ws.donmartin76.com"
+    "value": "portal.ow.donmartin76.com"
   },
   "PORTAL_PORTAL_URL": {
     "value": "http://${HELM_NAME}-portal.${K8S_NAMESPACE}.svc.cluster.local:3000"
