@@ -1,0 +1,97 @@
+{
+  "HELM_NAME": {
+    "value": "undefined-undefined"
+  },
+  "K8S_NAMESPACE": {
+    "value": "default"
+  },
+  "PORTAL_API_AESKEY": {
+    "encrypted": true,
+    "value": "6b51a1e27277a4c8824e25943aabfb6bc31803dc6c868590af47fd152fe639048c70602432c669ba232384e2d9194c365387dca8ddb0a3e3646445762992268ec5cca2b4efeb5bc9498ae71c2def51ce"
+  },
+  "PORTAL_API_DYNAMIC_CONFIG": {
+    "encrypted": false,
+    "value": "${PORTAL_CONFIG_BASE}dynamic"
+  },
+  "PORTAL_API_STATIC_CONFIG": {
+    "encrypted": false,
+    "value": "${PORTAL_CONFIG_BASE}static"
+  },
+  "PORTAL_API_URL": {
+    "encrypted": false,
+    "value": "http://portal-api:3001"
+  },
+  "PORTAL_AUTHSERVER_URL": {
+    "encrypted": false,
+    "value": "http://portal-auth:3010"
+  },
+  "PORTAL_CHATBOT_URL": {
+    "encrypted": false,
+    "value": "http://portal-chatbot:3004"
+  },
+  "PORTAL_CONFIG_BASE": {
+    "encrypted": false,
+    "value": "/var/portal-api/"
+  },
+  "PORTAL_ECHO_URL": {
+    "encrypted": false,
+    "value": "http://portal-api:3009"
+  },
+  "PORTAL_INITIALUSERS0_PASSWORD": {
+    "value": "sys1#Admin"
+  },
+  "PORTAL_KONG_ADAPTER_URL": {
+    "encrypted": false,
+    "value": "http://portal-kong-adapter:3002"
+  },
+  "PORTAL_KONG_ADMIN_URL": {
+    "encrypted": false,
+    "value": "http://kong:8001"
+  },
+  "PORTAL_MAILER_URL": {
+    "encrypted": false,
+    "value": "http://portal-mailer:3003"
+  },
+  "PORTAL_NETWORK_APIHOST": {
+    "encrypted": false,
+    "value": "api.portal.local"
+  },
+  "PORTAL_NETWORK_PORTALHOST": {
+    "encrypted": false,
+    "value": "portal.local"
+  },
+  "PORTAL_NETWORK_SCHEMA": {
+    "encrypted": false,
+    "value": "https"
+  },
+  "PORTAL_PORTAL_URL": {
+    "encrypted": false,
+    "value": "http://portal:3000"
+  },
+  "PORTAL_SESSIONSTORE_HOST": {
+    "encrypted": false,
+    "value": "portal-redis"
+  },
+  "PORTAL_SESSIONSTORE_PASSWORD": {
+    "encrypted": false,
+    "value": ""
+  },
+  "PORTAL_SESSIONSTORE_PORT": {
+    "encrypted": false,
+    "value": "6379"
+  },
+  "PORTAL_SESSIONSTORE_TYPE": {
+    "encrypted": false,
+    "value": "redis"
+  },
+  "PORTAL_STORAGE_PGHOST": {
+    "value": "wicked-database"
+  },
+  "PORTAL_STORAGE_PGPASSWORD": {
+    "value": "kong"
+  },
+  "PORTAL_AUTHMETHOD_DEFAULT_GITHUB_CLIENTSECRET": {
+    "value": "3c50f7b37378a2ce824b75c53cf9a86d921f098e3ad48294ab41fd1179e03800897731776f956ae8732780e78b4a4d67008788f989b5a1e56f64117f7a962287c3c9a3e3efb00bc2138eb31f7eb256cd",
+    "encrypted": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "apis": [
+    {
+      "id": "markdown-notes",
+      "name": "Markdown Notes API",
+      "desc": "This is the API behind the magnificent Markdown Notes application",
+      "auth": "oauth2",
+      "tags": [],
+      "plans": [
+        "basic",
+        "unlimited"
+      ],
+      "authMethods": [
+        "default:local",
+        "default:github"
+      ],
+      "settings": {
+        "token_expiration": 3600,
+        "scopes": {
+          "read_notes": {
+            "description": "Read notes"
+          },
+          "read_profile": {
+            "description": "Read user profile"
+          },
+          "read_users": {
+            "description": "Read users"
+          },
+          "write_profile": {
+            "description": "Write user profile"
+          },
+          "read_index": {
+            "description": "Read notes index"
+          },
+          "write_notes": {
+            "description": "Write notes"
+          },
+          "delete_notes": {
+            "description": "Delete notes"
+          }
+        },
+        "mandatory_scope": false,
+        "enable_implicit_grant": true,
+        "enable_password_grant": true,
+        "enable_authorization_code": true
+      },
+      "requiredGroup": "",
+      "registrationPool": ""
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/apis"
+    },
+    "plans": {
+      "href": "/plans"
+    }
+  }
+}

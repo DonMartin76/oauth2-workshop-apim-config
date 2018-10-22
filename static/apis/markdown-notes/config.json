@@ -1,0 +1,22 @@
+{
+  "api": {
+    "upstream_url": "http://markdown-notes.default.svc.cluster.local:3000",
+    "name": "markdown-notes",
+    "uris": [
+      "/markdown-notes"
+    ],
+    "strip_uri": true,
+    "preserve_host": false
+  },
+  "plugins": [
+    {
+      "name": "cors",
+      "config": {
+        "origins": [
+          "*"
+        ],
+        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"
+      }
+    }
+  ]
+}
