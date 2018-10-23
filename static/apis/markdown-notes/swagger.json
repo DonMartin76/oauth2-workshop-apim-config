@@ -1,16 +1,13 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
   "info": {
     "version": "1.0",
     "title": "Markdown Notes API"
   },
-  "basePath": "/markdown-notes/v1",
-  "consumes": [
-    "application/json"
-  ],
-  "schemes": [
-    "http",
-    "https"
+  "servers": [
+    {
+      "url": "https://api.ow.donmartin76.com/markdown-notes/v1\""
+    }
   ],
   "paths": {
     "/users/me": {
@@ -18,8 +15,12 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "schema": {
-              "$ref": "#/definitions/userType"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/userType"
+                }
+              }
             }
           }
         }
@@ -31,7 +32,9 @@
           {
             "name": "user_id",
             "in": "path",
-            "type": "string",
+            "schema": {
+              "type": "string"
+            },
             "description": "The user id to retrieve information for",
             "required": true
           }
@@ -39,8 +42,12 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "schema": {
-              "$ref": "#/definitions/userType"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/userType"
+                }
+              }
             }
           },
           "403": {
@@ -56,25 +63,33 @@
           {
             "name": "user_id",
             "in": "path",
-            "type": "string",
+            "schema": {
+              "type": "string"
+            },
             "description": "The user id to update information for",
             "required": true
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "$ref": "#/definitions/userType"
-            },
-            "required": true,
-            "description": "Updated user information"
           }
         ],
+        "requestBody": {
+          "required": true,
+          "description": "Updated user information",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/userType"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Successfully updated",
-            "schema": {
-              "$ref": "#/definitions/userType"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/userType"
+                }
+              }
             }
           },
           "403": {
@@ -92,7 +107,9 @@
           {
             "name": "user_id",
             "in": "path",
-            "type": "string",
+            "schema": {
+              "type": "string"
+            },
             "description": "The user id to retrieve the notes index for",
             "required": true
           }
@@ -100,8 +117,12 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "schema": {
-              "$ref": "#/definitions/indexType"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/indexType"
+                }
+              }
             }
           },
           "403": {
@@ -119,7 +140,9 @@
           {
             "name": "note_id",
             "in": "path",
-            "type": "string",
+            "schema": {
+              "type": "string"
+            },
             "description": "The id of the note to retrieve",
             "required": true
           }
@@ -127,8 +150,12 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "schema": {
-              "$ref": "#/definitions/noteType"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/noteType"
+                }
+              }
             }
           },
           "403": {
@@ -144,20 +171,24 @@
           {
             "name": "note_id",
             "in": "path",
-            "type": "string",
+            "schema": {
+              "type": "string"
+            },
             "description": "The id of the note to retrieve",
             "required": true
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "$ref": "#/definitions/noteType"
-            },
-            "required": true,
-            "description": "The note to update"
           }
         ],
+        "requestBody": {
+          "required": true,
+          "description": "The note to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/noteType"
+              }
+            }
+          }
+        },
         "responses": {
           "204": {
             "description": "Successfully saved"
@@ -175,7 +206,9 @@
           {
             "name": "note_id",
             "in": "path",
-            "type": "string",
+            "schema": {
+              "type": "string"
+            },
             "description": "The id of the note to retrieve",
             "required": true
           }
@@ -194,39 +227,52 @@
       }
     }
   },
-  "definitions": {
-    "userType": {
-      "type": "object",
-      "properties": {
-        "registered": {
-          "type": "boolean"
-        },
-        "external_id": {
-          "type": "string"
-        },
-        "username": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        },
-        "company": {
-          "type": "string"
-        },
-        "created_date": {
-          "type": "number"
-        },
-        "updated_date": {
-          "type": "number"
+  "components": {
+    "schemas": {
+      "userType": {
+        "type": "object",
+        "properties": {
+          "registered": {
+            "type": "boolean"
+          },
+          "external_id": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          },
+          "created_date": {
+            "type": "number"
+          },
+          "updated_date": {
+            "type": "number"
+          }
         }
-      }
-    },
-    "indexType": {
-      "type": "array",
-      "items": {
+      },
+      "indexType": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "noteType": {
         "type": "object",
         "properties": {
           "id": {
@@ -234,36 +280,25 @@
           },
           "title": {
             "type": "string"
+          },
+          "markdown": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "created_date": {
+            "type": "number"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_date": {
+            "type": "number"
+          },
+          "updated_by": {
+            "type": "string"
           }
-        }
-      }
-    },
-    "noteType": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "title": {
-          "type": "string"
-        },
-        "markdown": {
-          "type": "string"
-        },
-        "owner": {
-          "type": "string"
-        },
-        "created_date": {
-          "type": "number"
-        },
-        "created_by": {
-          "type": "string"
-        },
-        "updated_date": {
-          "type": "number"
-        },
-        "updated_by": {
-          "type": "string"
         }
       }
     }
