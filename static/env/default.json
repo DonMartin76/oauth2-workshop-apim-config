@@ -93,5 +93,8 @@
   "PORTAL_AUTHMETHOD_DEFAULT_GITHUB_CLIENTSECRET": {
     "value": "3c50f7b37378a2ce824b75c53cf9a86d921f098e3ad48294ab41fd1179e03800897731776f956ae8732780e78b4a4d67008788f989b5a1e56f64117f7a962287c3c9a3e3efb00bc2138eb31f7eb256cd",
     "encrypted": true
+  },
+  "APIS_MARKDOWN_NOTES_API_UPSTREAM": {
+    "value": "http://api-markdown-notes-api.default.svc.cluster.local:3100"
   }
 }

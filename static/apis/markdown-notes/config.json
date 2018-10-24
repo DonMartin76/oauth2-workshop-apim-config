@@ -1,6 +1,6 @@
 {
   "api": {
-    "upstream_url": "http://api-markdown-notes-api.default.svc.cluster.local:3100",
+    "upstream_url": "${APIS_MARKDOWN_NOTES_API_UPSTREAM}",
     "name": "markdown-notes",
     "uris": [
       "/markdown-notes"
