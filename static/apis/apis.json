@@ -40,6 +40,7 @@
           }
         },
         "mandatory_scope": false,
+        "enable_client_credentials": true,
         "enable_implicit_grant": true,
         "enable_password_grant": true,
         "enable_authorization_code": true
